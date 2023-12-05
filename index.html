@@ -21,16 +21,16 @@
         </tr>
     
         <tr>
-            <td><button type="button" value="sin" onclick="sin()"> sin </button> </td>
-            <td><button type="button" value="cos" onclick="cos()"> cos</button> </td>
-            <td><button type="button" value="tan" onclick="tan()"> tan </button> </td>
+            <td><button type="button" value="sin()" onclick="number(value)"> sin </button> </td>
+            <td><button type="button" value="cos()" onclick="number(value)"> cos</button> </td>
+            <td><button type="button" value="tan()" onclick="number(value)"> tan </button> </td>
             <td colspan="2">
              <button type="button" value="C" class="clear" onclick="remv()"> C </button>
          </td>
         </tr>
     
         <tr>
-            <td><button type="button" value="x^2" onclick="square()"> x<sup>2 </button> </td>
+            <td><button type="button" value="^" onclick="number(value)"> x<sup>[] </button> </td>
             <td><button type="button" value="x^3" onclick="cubed()"> x<sup>3 </button> </td>
             <td><button type="button" value="sqrt2" onclick="sqrt2()"> &radic; </button> </td>
             <td><button type="button" value="sqrt3" onclick="sqrt3()"> &#8731; </button> </td>
@@ -64,14 +64,14 @@
     
         <tr>
             <td><button type="button" value="0" onclick="number(value)"> 0 </button> </td>
-            <td><button type="button" value="/" onclick="getOperator(value)"> / </button> </td>
-            <td><button type="button" value="*" onclick="getOperator(value)"> X </button> </td>
-            <td><button type="button" value="-" onclick="getOperator(value)"> - </button> </td>
+            <td><button type="button" value="/" onclick="number(value)"> / </button> </td>
+            <td><button type="button" value="*" onclick="number(value)"> X </button> </td>
+            <td><button type="button" value="-" onclick="number(value)"> - </button> </td>
         </tr>
     
         <tr>
            
-            <td><button type="button" value="+" onclick="getOperator(value)"> + </button> </td>
+            <td><button type="button" value="+" onclick="number(value)"> + </button> </td>
             
             <td colspan="2"> <button type="button" value="=" onclick="equal()" class="equal">=</button> </td>
            
