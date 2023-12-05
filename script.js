@@ -2,7 +2,7 @@
 let s="";
 let operations = ["-", "+", "*", "/", "^"]
 
-let functions = ["sin", "cos", "tan", "sqrt", "sqrt3"]
+let functions = ["sin", "cos", "tan", "sqrt", "cubed"]
 
 
 function getValue(s) {
@@ -31,8 +31,9 @@ function getValue(s) {
             return functioning(f, val);
         } else {
             s = s.replace(new RegExp(`${f}\\(${grabFuncInput(s, f)}\\)`), functioning(f, val));
+
             console.log(s);
-            return getValue(s);
+            return getValue(checkBrackets(s));
         }
     }
 
@@ -126,17 +127,17 @@ function functioning(f, val) {
             return Math.cos(new Number(val) * Math.PI / 180);
         case 'tan':
             return Math.tan(new Number(val) * Math.PI / 180);
-        case '':
-            return new Number(a) / new Number(b);
-        case '^':
-            return  Math.pow(new Number(a),new Number(b));
+        case 'sqrt':
+            return Math.pow(new Number(val),1/2);
+        case 'cubed':
+            return Math.pow(new Number(val),1/3);
         default:
             return null;
     }
  }
 
  function checkBrackets(s) {
-    if(s.includes("(")){
+    if(s.includes("(") && getFuncs(s) == null){
         let first = s.indexOf("(");
         let last = s.indexOf(")")+1;
         value = s.substring(first, last)
